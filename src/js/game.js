@@ -10,6 +10,7 @@ class Game {
   start() {
     this.gameScreen.style.visibility = "visible";
     this.gameStart.style.visibility = "hidden";
+    this.player.createCircle();
     this.gameLoop();
   }
   gameLoop() {
@@ -17,10 +18,6 @@ class Game {
     if (this.gameIsOver) {
       return;
     }
-    this.updateSticks();
     window.requestAnimationFrame(() => this.gameLoop());
-  }
-  updateSticks() {
-    this.player.createCircle();
   }
 }
