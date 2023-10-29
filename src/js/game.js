@@ -4,17 +4,18 @@ class Game {
     this.gameStart = document.getElementById("start-page");
     this.gameIsOver = false;
     this.player = new Player();
-
     this.speed = 0.02;
     this.distanceOfMainCircle = 2.5;
     this.circles = [];
-    this.smallCircle = new Circle(context, 300, 200, 25, "2");
+    this.mainCircle = new Circle(700, 200, 100);
+    this.smallCircle = new Circle(700, 600, 15);
   }
 
   start() {
     this.gameScreen.style.visibility = "visible";
     this.gameStart.style.visibility = "hidden";
-
+    this.mainCircle.createCircle();
+    this.smallCircle.createSmallCircle();
     this.gameLoop();
   }
   gameLoop() {
@@ -22,9 +23,6 @@ class Game {
     if (this.gameIsOver) {
       return;
     }
-
-    mainCircle.createCircle();
-    this.smallCircle.createCircle();
 
     window.requestAnimationFrame(() => this.gameLoop());
   }

@@ -1,33 +1,29 @@
 class Circle {
-  constructor(context, xposition, yposition, radius, text) {
-    this.context = context;
-    this.xposition = xposition;
-    this.yposition = yposition;
-    this.radius = radius;
+  constructor(x, y, r, text) {
+    this.x = x;
+    this.y = y;
+    this.r = r;
     this.text = text;
+    this.theCount = 10;
   }
 
   createCircle() {
-    canvas.style.border = "1px solid black";
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    theContext.beginPath();
+    theContext.arc(this.x, this.y, this.r, Math.PI * 2, false);
+    theContext.strokeStyle = "black";
+    theContext.fill();
+    theContext.stroke();
+  }
 
-    //to draw we are passing a lot methods
-    //creating super object
-    //magic brush
-    context.arc(
-      this.xposition,
-      this.yposition,
-      this.radius,
-      0,
-      Math.PI * 2,
-      false
-    );
-    context.strokeStyle = "black";
-    context.fillStyle = "black";
-    context.textAlign = "center";
+  createSmallCircle() {
+    for (let i = 0; i < this.theCount; i++) {
+      theContext.beginPath();
+      theContext.arc(this.x, this.y + i * 40, this.r, 0, Math.PI * 2);
+      //radius,position,0 is radiance, pi is the angle
 
-    context.stroke();
-    context.fill();
+      theContext.fill();
+      theContext.fillStyle = "black";
+      theContext.stroke();
+    }
   }
 }
