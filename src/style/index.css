@@ -9,41 +9,6 @@
   visibility: visible;
 }
 #game-screen {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   visibility: hidden;
 }
-#spinning-circle {
-  background-color: black;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  animation-name: rotate;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  display: flex;
-}
 
-#spinning-circle h1 {
-  font-size: 50px;
-  background-color: black;
-}
-
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-
-  
-}
