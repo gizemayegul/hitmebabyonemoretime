@@ -8,7 +8,7 @@ window.onload = function () {
   function spaceHandle(event) {
     const key = event.key;
     if (event.code == "Space" || event.keyCode == 32) {
-      game.player.appendChild();
+      //do something
     }
   }
 
