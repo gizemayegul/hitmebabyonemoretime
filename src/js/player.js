@@ -7,7 +7,13 @@ class Player {
     this.radius = radius;
     this.space = 30;
     this.top = 500;
-    this.move = 15 0;
+    this.left = null;
+    this.move = 100;
+    this.currentIndex = 0;
+    this.right = 0;
+    this.bottom = 0;
+    this.angle = 0;
+    this.obstacle = [];
   }
 
   createCircle() {
@@ -25,5 +31,28 @@ class Player {
       circle.style.top = `${(this.top += this.space)}px`;
       circle.style.color = "white";
     });
+  }
+
+  appendChild() {
+    const circles = document.getElementsByClassName("circle");
+    const mainCircle = document.getElementById("spinning-circle");
+    const currentCircle = circles[this.currentIndex];
+    const currentCircleOffsetTop =
+      currentCircle.offsetTop - mainCircle.offsetTop;
+    const currentCircleOffsetLeft =
+      currentCircle.offsetLeft - mainCircle.offsetLeft;
+
+    // Move the currentCircle inside the mainCircle
+    mainCircle.appendChild(currentCircle);
+
+    // Update the position of the currentCircle relative to the mainCircle
+    currentCircle.style.top = currentCircleOffsetTop + "px";
+    currentCircle.style.left = currentCircleOffsetLeft + "px";
+
+    mainCircle.appendChild(currentCircle);
+
+    console.log(currentCircle);
+
+    this.currentIndex++;
   }
 }
