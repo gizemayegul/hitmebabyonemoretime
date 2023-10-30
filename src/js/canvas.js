@@ -6,7 +6,8 @@ canvas.height = window.innerHeight;
 const circles = [];
 const theCount = 9;
 const speed = 20;
-const isFree = true;
+const isFree = false;
+let angle = 45.5;
 
 const mainCircle = new Circle(700, 200, 60, 1);
 //const smallCircle = new Circle(700, 500, 50);
