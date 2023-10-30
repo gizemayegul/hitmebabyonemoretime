@@ -1,22 +1,28 @@
-const canvas = document.getElementById("game-screen");
-const theContext = canvas.getContext("2d");
-canvas.style.border = "1px solid black";
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-const circles = [];
-const theCount = 9;
-const speed = 20;
-const isFree = false;
-let angle = 45.5;
+const cnv = document.getElementById("game-screen");
+const ctx = cnv.getContext("2d");
 
-const mainCircle = new Circle(700, 200, 60, 1);
-//const smallCircle = new Circle(700, 500, 50);
+cnv.style.border = "1px solid black";
+cnv.width = window.innerWidth;
+cnv.height = window.innerHeight;
+ctx.textAlign = "center";
+ctx.textBaseline = "middle";
 
-//smallCircle
+ctx.lineWidth = 1.5;
+let circles = [];
+let countOfClick = 0;
+let theCount = 9;
+let game = null;
+let speed = 0.02;
+let distanceOfMainCircle = 6;
+
+//create small circles
+const mainCircle = new Circle(ctx, 700, 200, 60, "1");
+mainCircle.createCircle();
 
 for (let i = 0; i < theCount; i++) {
   circles.push({
-    circle: new Circle(700, 500 + i * 40, 15, theCount - i),
+    circle: new Circle(ctx, 700, i * 40 + 500, 15, theCount - i),
+    firstY: i * 50 + 400,
   });
   circles[i].circle.createCircle();
 }

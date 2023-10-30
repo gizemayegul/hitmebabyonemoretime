@@ -1,30 +1,28 @@
 class Circle {
-  constructor(x, y, r, text) {
+  constructor(ctx, x, y, r, text) {
+    this.ctx = ctx;
     this.x = x;
     this.y = y;
     this.r = r;
     this.text = text;
+    this.isFree = true;
+    this.angle = 45.5;
   }
 
   createCircle() {
-    theContext.beginPath();
+    this.ctx.beginPath();
+    this.ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+    this.ctx.fillStyle = "black";
+    this.ctx.fill();
+    this.ctx.fillStyle = "white";
+    this.ctx.font = "20px Arial";
 
-    theContext.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-    theContext.fillStyle = "black"; // Set the circle color to black
-    theContext.strokeStyle = "black"; // Set the circle border color to black
+    this.ctx.fillText(this.text, this.x, this.y);
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
 
-    theContext.fill();
-    theContext.stroke();
-    //this requires very  strict squence because otherwise the text will not be drawn properly when drawing the circle with a stroke style th
-
-    theContext.fillStyle = "white"; // Set the text color to white
-    theContext.font = "bold 15px Arial";
-    theContext.textAlign = "center"; // Set the text alignment
-    theContext.textBaseline = "middle"; //set the baseline
-
-    theContext.fillText(this.text, this.x, this.y);
-
-    theContext.closePath(); //what is that?
+    ctx.lineWidth = 1.5;
+    this.ctx.closePath();
   }
 
   transform(x, y) {
@@ -33,14 +31,10 @@ class Circle {
   }
 
   line(x1, y1, x2, y2) {
-    this.x1 = x1;
-    this.y1 = y1;
-    this.x2 = x2;
-    this.y2 = y2;
-    theContext.beginPath();
-    theContext.moveTo(this.x1, this.y1);
-    theContext.lineTo(this.x2, this.y2);
-    theContext.stroke();
-    theContext.closePath();
+    this.ctx.beginPath();
+    this.ctx.moveTo(x1, y1);
+    this.ctx.lineTo(x2, y2);
+    this.ctx.stroke();
+    this.ctx.closePath();
   }
 }
