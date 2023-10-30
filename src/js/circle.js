@@ -4,26 +4,43 @@ class Circle {
     this.y = y;
     this.r = r;
     this.text = text;
-    this.theCount = 10;
   }
 
   createCircle() {
     theContext.beginPath();
-    theContext.arc(this.x, this.y, this.r, Math.PI * 2, false);
-    theContext.strokeStyle = "black";
+
+    theContext.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+    theContext.fillStyle = "black"; // Set the circle color to black
+    theContext.strokeStyle = "black"; // Set the circle border color to black
+
     theContext.fill();
     theContext.stroke();
+    //this requires very  strict squence because otherwise the text will not be drawn properly when drawing the circle with a stroke style th
+
+    theContext.fillStyle = "white"; // Set the text color to white
+    theContext.font = "bold 15px Arial";
+    theContext.textAlign = "center"; // Set the text alignment
+    theContext.textBaseline = "middle"; //set the baseline
+
+    theContext.fillText(this.text, this.x, this.y);
+
+    theContext.closePath(); //what is that?
   }
 
-  createSmallCircle() {
-    for (let i = 0; i < this.theCount; i++) {
-      theContext.beginPath();
-      theContext.arc(this.x, this.y + i * 40, this.r, 0, Math.PI * 2);
-      //radius,position,0 is radiance, pi is the angle
+  transform(x, y) {
+    this.x = x;
+    this.y = y;
+  }
 
-      theContext.fill();
-      theContext.fillStyle = "black";
-      theContext.stroke();
-    }
+  line(x1, y1, x2, y2) {
+    this.x1 = x1;
+    this.y1 = y1;
+    this.x2 = x2;
+    this.y2 = y2;
+    theContext.beginPath();
+    theContext.moveTo(this.x1, this.y1);
+    theContext.lineTo(this.x2, this.y2);
+    theContext.stroke();
+    theContext.closePath();
   }
 }
