@@ -25,7 +25,7 @@ class Circle {
     this.ctx.closePath();
   }
 
-  transform(x, y) {
+  translate(x, y) {
     this.x = x;
     this.y = y;
   }

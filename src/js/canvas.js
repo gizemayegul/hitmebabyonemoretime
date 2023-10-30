@@ -13,7 +13,7 @@ let countOfClick = 0;
 let theCount = 9;
 let game = null;
 let speed = 0.02;
-let distanceOfMainCircle = 6;
+let distanceOfMainCircle = 2.5;
 
 //create small circles
 const mainCircle = new Circle(ctx, 700, 200, 60, "1");
@@ -26,3 +26,5 @@ for (let i = 0; i < theCount; i++) {
   });
   circles[i].circle.createCircle();
 }
+
+console.log(circles);
