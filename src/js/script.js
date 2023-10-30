@@ -6,8 +6,23 @@ window.onload = function () {
   });
 
   function spaceHandle(event) {
-    const key = event.key;
     if (event.code == "Space" || event.keyCode == 32) {
+      console.log("Space key pressed");
+
+      // Update the positions of small circles
+      for (let i = 0; i < circles.length; i++) {
+        const smallCircle = circles[i].circle;
+        smallCircle.transform(smallCircle.x, smallCircle.y - 100);
+      }
+
+      // Clear the canvas
+      theContext.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Redraw the circles
+      mainCircle.createCircle();
+      for (let i = 0; i < circles.length; i++) {
+        circles[i].circle.createCircle();
+      }
     }
   }
 
