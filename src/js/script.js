@@ -11,12 +11,22 @@ window.onload = function () {
 
       // Update the positions of small circles
       for (let i = 0; i < circles.length; i++) {
+        console.log(mainCircle.y, "main");
         const smallCircle = circles[i].circle;
-        smallCircle.transform(smallCircle.x, smallCircle.y - 100);
+        console.log(smallCircle.y, "smallCircle");
+        const theDistance = smallCircle.y - mainCircle.y;
+        console.log(theDistance, "distance");
+        smallCircle.transform(
+          smallCircle.x, // 20 should be the speed of the big circle
+          smallCircle.y - theDistance + mainCircle.r + smallCircle.r + 20 //the distance of line will be replaced by 20
+        );
+        console.log(speed, "speed", smallCircle.x);
+        theContext.clearRect(0, 0, canvas.width, canvas.height);
+
+        // console.log(smallCircle);
       }
 
       // Clear the canvas
-      theContext.clearRect(0, 0, canvas.width, canvas.height);
 
       // Redraw the circles
       mainCircle.createCircle();
