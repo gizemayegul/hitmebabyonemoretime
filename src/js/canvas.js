@@ -6,6 +6,7 @@ cnv.width = window.innerWidth;
 cnv.height = window.innerHeight;
 
 ctx.lineWidth = 1.5;
+///global variables
 let circles = [];
 let countOfClick = 0;
 let theCount = 20;

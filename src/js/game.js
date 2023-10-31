@@ -18,12 +18,14 @@ class Game {
   gameLoop() {
     console.log("in the game loop");
     if (game === false) {
+      //this.resetGame();
       setTimeout(() => {
         this.finishPage.style.visibility = "visible";
         this.gameScreen.style.visibility = "hidden";
         this.finishPage.style.visibility = "visible";
         console.log("game is finished");
       }, 1000); // Delay
+
       return console.log("game is finished");
     }
 
@@ -52,7 +54,6 @@ class Game {
       game = false;
       window.location.reload();
     }
-    console.log(game, "thetes");
   }
 
   update() {
@@ -90,5 +91,22 @@ class Game {
       circle.draw();
     });
     mainCircle.draw();
+  }
+
+  resetGame() {
+    this.finishPage.style.visibility = "hidden";
+    circles = [];
+    distanceOfMainCircle = 2.5;
+    countOfClick = 0;
+    theCount = 20;
+    game = null; //game true then win// se game finished
+    speed = 0.02;
+    for (let i = 0; i < theCount; i++) {
+      circles.push({
+        circle: new Circle(ctx, 700, i * 40 + 500, 15, theCount - i),
+        firstY: i * 40 + 500,
+      });
+      circles[i].circle.draw();
+    }
   }
 }

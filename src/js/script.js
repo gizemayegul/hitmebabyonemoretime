@@ -7,6 +7,7 @@ window.onload = function () {
     game.start();
   });
   finishButton.addEventListener("click", function () {
+    game.resetGame();
     game.start();
   });
 
