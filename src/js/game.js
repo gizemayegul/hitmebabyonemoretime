@@ -20,7 +20,6 @@ class Game {
     if (game === false) {
       //this.resetGame();
       setTimeout(() => {
-        this.finishPage.style.display = "block";
         this.gameScreen.style.display = "none";
         this.finishPage.style.display = "block";
         console.log("game is finished");
@@ -49,6 +48,17 @@ class Game {
       countOfClick++;
       if (countOfClick === theCount) {
         game = true; // game wind
+        //bring the start screen
+        //hoW?
+        if (game) {
+          setTimeout(() => {
+            this.finishPage.style.display = "none";
+            this.gameScreen.style.display = "none";
+            this.gameStart.style.display = "block";
+            console.log("game is finished");
+            this.resetGame();
+          }, 2000); // Delay
+        }
       }
     } else if (countOfClick === theCount && game === false) {
       game = false;
@@ -73,6 +83,7 @@ class Game {
     circles.forEach((circle) => {
       const firstY = circle.firstY; // this is the y position of the first circle
       circle = circle.circle;
+
       if (circle.isFree) {
         const y = firstY - countOfClick * 40; //
         circle.translate(circle.x, y);
@@ -83,7 +94,6 @@ class Game {
           mainCircle.y +
             Math.sin(circle.angle) * mainCircle.r * distanceOfMainCircle
         );
-
         circle.angle += speed;
 
         circle.line(circle.x, circle.y, mainCircle.x, mainCircle.y);

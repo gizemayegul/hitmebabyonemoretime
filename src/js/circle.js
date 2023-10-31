@@ -5,7 +5,7 @@ class Circle {
     this.y = y;
     this.r = r;
     this.text = text;
-    this.isFree = true;
+    this.isFree = true; //declare to find the circle is free or not?
     this.angle = 45.5;
   }
 

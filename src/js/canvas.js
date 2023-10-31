@@ -20,7 +20,7 @@ mainCircle.draw();
 
 for (let i = 0; i < theCount; i++) {
   circles.push({
-    circle: new Circle(ctx, 700, i * 40 + 500, 15, theCount - i),
+    circle: new Circle(ctx, 700, i * 40 + 200, 15, theCount - i),
     firstY: i * 40 + 500,
   });
   circles[i].circle.draw();
