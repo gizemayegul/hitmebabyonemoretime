@@ -3,8 +3,7 @@
 
 ## Description
 
-- This game a replica of a mobile game called "aa".
-- The main goal of the game finish the small circles you have,and attacht to the big circle without collapsing each other.
+- The main goal of the game finish the small circles you have,and attacht them to the big circle without collapsing each other.
 - If you finish the small circles you won! if they collapse you lose!
 
 ## MVP
@@ -51,8 +50,8 @@
 
 ### Script
 
-##Links
+## Links
 - [Trello link](https://trello.com/b/uSgVpQKq/game-project)https://trello.com/b/uSgVpQKq/game-project]
 - [Deployment Link ](https://gizemayegul.github.io/hitmebabyonemoretime/)https://gizemayegul.github.io/hitmebabyonemoretime/
 - [Github link](https://github.com/gizemayegul/hitmebabyonemoretime)https://github.com/gizemayegul/hitmebabyonemoretime
--[ Slides Link ](https://docs.google.com/presentation/d/1XpB1O-pbW3cK996ccPqG4itFtgqiCEsXr4aovq4Kqcg/edit#slide=id.g3fa6174f79_0_125)https://docs.google.com/presentation/d/1XpB1O-pbW3cK996ccPqG4itFtgqiCEsXr4aovq4Kqcg/edit#slide=id.g3fa6174f79_0_125
+- [Slides Link](https://docs.google.com/presentation/d/1XpB1O-pbW3cK996ccPqG4itFtgqiCEsXr4aovq4Kqcg/edit#slide=id.g3fa6174f79_0_125)https://docs.google.com/presentation/d/1XpB1O-pbW3cK996ccPqG4itFtgqiCEsXr4aovq4Kqcg/edit#slide=id.g3fa6174f79_0_125
