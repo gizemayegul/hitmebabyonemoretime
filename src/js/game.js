@@ -66,7 +66,7 @@ class Game {
     } else {
       ctx.fillStyle = "red";
       speed -= speed > 0 ? 0.00025 : 0; //animation
-      distanceOfMainCircle += distanceOfMainCircle > 0 ? 0.05 : 0; // the distance is increasing
+      distanceOfMainCircle += distanceOfMainCircle > 0 ? 0.05 : 0; // the distance is increa
     }
     ctx.fillRect(0, 0, cnv.width, cnv.height);
 
@@ -74,7 +74,7 @@ class Game {
       const firstY = circle.firstY; // this is the y position of the first circle
       circle = circle.circle;
       if (circle.isFree) {
-        const y = (firstY -= 50); //
+        const y = firstY - countOfClick * 40; //
         circle.translate(circle.x, y);
       } else {
         circle.translate(
