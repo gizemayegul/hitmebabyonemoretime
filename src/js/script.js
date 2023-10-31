@@ -8,6 +8,6 @@ window.onload = function () {
   window.addEventListener("keyup", (e) =>
     e.key === " " ? game.click(e) : null
   );
-  cnv.addEventListener("click", game.click);
+  //cnv.addEventListener("click", game.click);
   setInterval(game.update, 1000 / 65);
 };

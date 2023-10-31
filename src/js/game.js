@@ -24,9 +24,9 @@ class Game {
         circle = circle.circle;
         if (circle.isFree) return;
         if (
-          circles[countOfClick].circle.x > circle.x - 25 &&
-          circles[countOfClick].circle.x < circle.x + 12.5 &&
-          circle.y > cnv.height / 2
+          circles[countOfClick].circle.x >= circle.x - 25 &&
+          circles[countOfClick].circle.x <= circle.x + 15 &&
+          circle.y >= mainCircle.y / 2
         ) {
           game = false;
           return;
@@ -46,11 +46,11 @@ class Game {
     if (game === null) {
       ctx.fillStyle = "antiquewhite";
     } else if (game) {
-      ctx.fillStyle = "#00ff31";
+      ctx.fillStyle = "#green";
       speed -= speed > 0 ? 0.00025 : 0;
       distanceOfMainCircle += distanceOfMainCircle < 10 ? 0.05 : 0;
     } else {
-      ctx.fillStyle = "#ff004a";
+      ctx.fillStyle = "#red";
       speed -= speed > 0 ? 0.00025 : 0;
       distanceOfMainCircle += distanceOfMainCircle > 0 ? 0.05 : 0;
     }
