@@ -50,7 +50,7 @@
 
 ### Script
 
-##Links
+## Links
 - [Trello link](https://trello.com/b/uSgVpQKq/game-project)https://trello.com/b/uSgVpQKq/game-project]
 - [Deployment Link ](https://gizemayegul.github.io/hitmebabyonemoretime/)https://gizemayegul.github.io/hitmebabyonemoretime/
 - [Github link](https://github.com/gizemayegul/hitmebabyonemoretime)https://github.com/gizemayegul/hitmebabyonemoretime
