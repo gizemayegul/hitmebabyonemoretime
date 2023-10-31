@@ -7,14 +7,14 @@
 
 #start-page {
   
-  visibility: visible;
+  display: block;
 }
 #game-screen {
-  visibility: hidden;
+  display: none;
 }
 
 
 #finish-page {
-  visibility: hidden;
+  display: none;
 }
 

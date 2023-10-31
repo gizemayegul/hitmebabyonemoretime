@@ -6,8 +6,8 @@ class Game {
   }
 
   start() {
-    this.gameScreen.style.visibility = "visible";
-    this.gameStart.style.visibility = "hidden";
+    this.gameScreen.style.display = "block";
+    this.gameStart.style.display = "none";
     if (game) {
       this.gameStart.style.backgroundColor = "green";
     } else if (game === false) {
@@ -20,9 +20,9 @@ class Game {
     if (game === false) {
       //this.resetGame();
       setTimeout(() => {
-        this.finishPage.style.visibility = "visible";
-        this.gameScreen.style.visibility = "hidden";
-        this.finishPage.style.visibility = "visible";
+        this.finishPage.style.display = "block";
+        this.gameScreen.style.display = "none";
+        this.finishPage.style.display = "block";
         console.log("game is finished");
       }, 1000); // Delay
 
@@ -38,7 +38,7 @@ class Game {
         if (circle.isFree) return;
         if (
           circles[countOfClick].circle.x >= circle.x - 25 &&
-          circles[countOfClick].circle.x <= circle.x + 15 + speed &&
+          circles[countOfClick].circle.x <= circle.x + 15 + 3 &&
           circle.y >= mainCircle.y / 2
         ) {
           game = false;
@@ -66,7 +66,7 @@ class Game {
     } else {
       ctx.fillStyle = "red";
       speed -= speed > 0 ? 0.00025 : 0; //animation
-      distanceOfMainCircle += distanceOfMainCircle > 0 ? 0.05 : 0;
+      distanceOfMainCircle += distanceOfMainCircle > 0 ? 0.05 : 0; // the distance is increasing
     }
     ctx.fillRect(0, 0, cnv.width, cnv.height);
 
@@ -74,7 +74,7 @@ class Game {
       const firstY = circle.firstY; // this is the y position of the first circle
       circle = circle.circle;
       if (circle.isFree) {
-        const y = firstY - countOfClick * 20; //
+        const y = (firstY -= 50); //
         circle.translate(circle.x, y);
       } else {
         circle.translate(
@@ -94,7 +94,7 @@ class Game {
   }
 
   resetGame() {
-    this.finishPage.style.visibility = "hidden";
+    this.finishPage.style.display = "none";
     circles = [];
     distanceOfMainCircle = 2.5;
     countOfClick = 0;
