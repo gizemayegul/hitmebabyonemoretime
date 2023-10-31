@@ -15,7 +15,7 @@ class Circle {
     this.ctx.fillStyle = "black";
     this.ctx.fill();
     this.ctx.fillStyle = "white";
-    this.ctx.font = "12px Arial";
+    this.ctx.font = "16px Arial";
     this.ctx.fillText(this.text, this.x, this.y);
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";

@@ -5,9 +5,28 @@
   background-color: antiquewhite;
 }
 
-#start-page {
+#start-page {  
+  display: block
+}#start-page,#finish-page {
+  position: relative;
+  height: 100vh; /* Adjust as needed */
+}
+
+#title,#finish-title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#start-button,#finish-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  border-radius: 10px;
   
-  display: block;
 }
 #game-screen {
   display: none;
@@ -18,3 +37,10 @@
   display: none;
 }
 
+
+/* 
+#game-screen {
+  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fbritney-spears-hit-me-baby-one-more-time-music-video-gifs&psig=AOvVaw1W2ECRcBjReTB2si2LeU7q&ust=1698850956491000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCID7kZDHoIIDFQAAAAAdAAAAABAE');
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
