@@ -4,8 +4,6 @@ const ctx = cnv.getContext("2d");
 cnv.style.border = "1px solid black";
 cnv.width = window.innerWidth;
 cnv.height = window.innerHeight;
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
 
 ctx.lineWidth = 1.5;
 let circles = [];
@@ -17,14 +15,12 @@ let distanceOfMainCircle = 2.5;
 
 //create small circles
 const mainCircle = new Circle(ctx, 700, 200, 60, "1");
-mainCircle.createCircle();
+mainCircle.draw();
 
 for (let i = 0; i < theCount; i++) {
   circles.push({
-    circle: new Circle(ctx, 700, i * 40 + 500, 15, theCount - i),
+    circle: new Circle(ctx, 700, i * 50 + 400, 15, theCount - i),
     firstY: i * 50 + 400,
   });
-  circles[i].circle.createCircle();
+  circles[i].circle.draw();
 }
-
-console.log(circles);

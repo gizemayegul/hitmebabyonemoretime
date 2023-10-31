@@ -12,7 +12,7 @@ class Game {
   }
   gameLoop() {
     console.log("in the game loop");
-    if (this.gameIsOver) {
+    if (game) {
       return;
     }
 
@@ -60,20 +60,23 @@ class Game {
       const firstY = circle.firstY; // this is the y position of the first circle
       circle = circle.circle;
       if (circle.isFree) {
-        const y = firstY - countOfClick * 50; //
+        const y = firstY + countOfClick * 50; //
         circle.translate(circle.x, y);
       } else {
         circle.translate(
           mainCircle.x +
-            Math.cos(circle.angle) * mainCircle.radius * distanceOfMainCircle,
+            Math.cos(circle.angle) * mainCircle.r * distanceOfMainCircle,
           mainCircle.y +
-            Math.sin(circle.angle) * mainCircle.radius * distanceOfMainCircle
+            Math.sin(circle.angle) * mainCircle.r * distanceOfMainCircle
         );
+
         circle.angle += speed;
+        console.log(circle.angle, "angle", speed, "speed");
+
         circle.line(circle.x, circle.y, mainCircle.x, mainCircle.y);
       }
-      circle.createCircle();
+      circle.draw();
     });
-    mainCircle.createCircle();
+    mainCircle.draw();
   }
 }

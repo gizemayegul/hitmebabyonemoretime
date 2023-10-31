@@ -9,14 +9,13 @@ class Circle {
     this.angle = 45.5;
   }
 
-  createCircle() {
+  draw() {
     this.ctx.beginPath();
     this.ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
     this.ctx.fillStyle = "black";
     this.ctx.fill();
     this.ctx.fillStyle = "white";
-    this.ctx.font = "20px Arial";
-
+    this.ctx.font = "12px Arial";
     this.ctx.fillText(this.text, this.x, this.y);
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";

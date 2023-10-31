@@ -8,8 +8,8 @@ window.onload = function () {
   function spaceHandle(event) {
     if (event.code == "Space" || event.keyCode == 32) {
       console.log("Space key pressed");
-      game.update();
       game.click();
+      game.update();
     }
   }
   window.addEventListener("keyup", spaceHandle);
