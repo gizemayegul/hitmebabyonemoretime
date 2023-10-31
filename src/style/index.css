@@ -39,7 +39,9 @@
   display: none;
 }
 
-
+#game-startsound,#game-endsound,#game-target,#game-win{
+  display: none;
+}
 /* 
 #game-screen {
   background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fbritney-spears-hit-me-baby-one-more-time-music-video-gifs&psig=AOvVaw1W2ECRcBjReTB2si2LeU7q&ust=1698850956491000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCID7kZDHoIIDFQAAAAAdAAAAABAE');
