@@ -3,8 +3,7 @@
 
 ## Description
 
-- This game a replica of a mobile game called "aa".
-- The main goal of the game finish the small circles you have,and attacht to the big circle without collapsing each other.
+- The main goal of the game finish the small circles you have,and attacht them to the big circle without collapsing each other.
 - If you finish the small circles you won! if they collapse you lose!
 
 ## MVP
