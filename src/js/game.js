@@ -3,11 +3,14 @@ class Game {
     this.gameScreen = document.getElementById("game-screen");
     this.gameStart = document.getElementById("start-page");
     this.finishPage = document.getElementById("finish-page");
+    this.endGameSound = document.getElementById("game-endsound");
+    this.winGameSound = document.getElementById("game-win");
   }
 
   start() {
     this.gameScreen.style.display = "block";
     this.gameStart.style.display = "none";
+
     if (game) {
       this.gameStart.style.backgroundColor = "green";
     } else if (game === false) {
@@ -19,11 +22,12 @@ class Game {
     console.log("in the game loop");
     if (game === false) {
       //this.resetGame();
+      this.endGameSound.play();
       setTimeout(() => {
         this.gameScreen.style.display = "none";
         this.finishPage.style.display = "block";
         console.log("game is finished");
-      }, 1000); // Delay
+      }, 2000); // Delay
 
       return console.log("game is finished");
     }
@@ -51,6 +55,7 @@ class Game {
         //bring the start screen
         //hoW?
         if (game) {
+          this.winGameSound.play();
           setTimeout(() => {
             this.finishPage.style.display = "none";
             this.gameScreen.style.display = "none";
@@ -81,7 +86,7 @@ class Game {
     ctx.fillRect(0, 0, cnv.width, cnv.height);
 
     circles.forEach((circle) => {
-      const firstY = circle.firstY; // this is the y position of the first circle
+      const firstY = circle.firstY; //* this is the y position of the small circles
       circle = circle.circle;
 
       if (circle.isFree) {
