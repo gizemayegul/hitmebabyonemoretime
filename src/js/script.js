@@ -5,12 +5,9 @@ window.onload = function () {
     game.start();
   });
 
-  function spaceHandle(event) {
-    if (event.code == "Space" || event.keyCode == 32) {
-      console.log("Space key pressed");
-      game.click();
-      game.update();
-    }
-  }
-  window.addEventListener("keyup", spaceHandle);
+  window.addEventListener("keyup", (e) =>
+    e.key === " " ? game.click(e) : null
+  );
+  cnv.addEventListener("click", game.click);
+  setInterval(game.update, 1000 / 65);
 };
