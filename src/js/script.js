@@ -17,9 +17,9 @@ window.onload = function () {
 
   window.addEventListener("keyup", (e) => {
     e.key === " " ? game.click(e) : null;
-    console.log("clicked");
+    console.log("clicked"); //!click part needs to be fixed
     gameTargetSound.play();
   });
 
-  setInterval(game.update, 1000 / 65);
+  setInterval(game.update, 1000 / 65); //* for the circles animation
 };

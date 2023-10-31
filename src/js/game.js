@@ -21,15 +21,13 @@ class Game {
   gameLoop() {
     console.log("in the game loop");
     if (game === false) {
-      //this.resetGame();
       this.endGameSound.play();
       setTimeout(() => {
         this.gameScreen.style.display = "none";
         this.finishPage.style.display = "block";
-        console.log("game is finished");
-      }, 2000); // Delay
+      }, 2000); //* Delaying the screen changes
 
-      return console.log("game is finished");
+      return;
     }
 
     window.requestAnimationFrame(() => this.gameLoop());
@@ -41,7 +39,7 @@ class Game {
         if (circle.isFree) return;
         if (
           circles[countOfClick].circle.x >= circle.x - 25 &&
-          circles[countOfClick].circle.x <= circle.x + 15 + 3 &&
+          circles[countOfClick].circle.x <= circle.x + 15 + 3 && //! the collision part should be improved
           circle.y >= mainCircle.y / 2
         ) {
           game = false;
@@ -51,18 +49,15 @@ class Game {
       circles[countOfClick].circle.isFree = false;
       countOfClick++;
       if (countOfClick === theCount) {
-        game = true; // game wind
-        //bring the start screen
-        //hoW?
+        game = true; //* game wind
         if (game) {
           this.winGameSound.play();
           setTimeout(() => {
             this.finishPage.style.display = "none";
             this.gameScreen.style.display = "none";
             this.gameStart.style.display = "block";
-            console.log("game is finished");
             this.resetGame();
-          }, 2000); // Delay
+          }, 2000); //* delayin the screen changes
         }
       }
     } else if (countOfClick === theCount && game === false) {
@@ -76,14 +71,14 @@ class Game {
       ctx.fillStyle = "antiquewhite";
     } else if (game) {
       ctx.fillStyle = "#98C9A6";
-      speed -= speed > 0 ? 0.00025 : 0;
-      distanceOfMainCircle += distanceOfMainCircle < 10 ? 0.05 : 0;
+      speed -= speed > 0 ? 0.00025 : 0; //* to stop the animation
+      distanceOfMainCircle += distanceOfMainCircle < 10 ? 0.05 : 0; //! changes the distance of the main circle to get the  animation
     } else {
       ctx.fillStyle = "#F08080";
-      speed -= speed > 0 ? 0.00025 : 0; //animation
-      distanceOfMainCircle += distanceOfMainCircle > 0 ? 0.05 : 0; // the distance is increa
+      speed -= speed > 0 ? 0.00025 : 0; //* to stop the animation
+      distanceOfMainCircle += distanceOfMainCircle > 0 ? 0.05 : 0; // the distance is increa //! check the logic better
     }
-    ctx.fillRect(0, 0, cnv.width, cnv.height);
+    ctx.fillRect(0, 0, cnv.width, cnv.height); //* to clan the canvas
 
     circles.forEach((circle) => {
       const firstY = circle.firstY; //* this is the y position of the small circles
