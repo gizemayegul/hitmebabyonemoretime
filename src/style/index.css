@@ -14,14 +14,21 @@
 
 #title,#finish-title {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+#howtoplay{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px black solid;
+  border-radius: 5px;
+}
 #nameinput{
   position: absolute;
-  top: 48%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 15px;
@@ -31,7 +38,7 @@
 
 #start-button,#finish-button {
   position: absolute;
-  top: 55%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 15px;
