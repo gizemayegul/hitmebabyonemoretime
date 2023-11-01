@@ -10,12 +10,6 @@ class Game {
   start() {
     this.gameScreen.style.display = "block";
     this.gameStart.style.display = "none";
-
-    if (game) {
-      this.gameStart.style.backgroundColor = "green";
-    } else if (game === false) {
-      this.gameStart.style.backgroundColor = "red";
-    }
     this.gameLoop();
   }
   gameLoop() {
@@ -25,7 +19,7 @@ class Game {
       setTimeout(() => {
         this.gameScreen.style.display = "none";
         this.finishPage.style.display = "block";
-      }, 2000); //* Delaying the screen changes
+      }, 2200); //* Delaying the screen changes
 
       return;
     }
@@ -54,10 +48,15 @@ class Game {
           this.winGameSound.play();
           setTimeout(() => {
             this.finishPage.style.display = "none";
-            this.gameScreen.style.display = "none";
-            this.gameStart.style.display = "block";
-            this.resetGame();
-          }, 2000); //* delayin the screen changes
+            this.changeLevel();
+          }, 2000);
+
+          // setTimeout(() => {
+          //   this.finishPage.style.display = "none";
+          //   this.gameScreen.style.display = "none";
+          //   this.gameStart.style.display = "block";
+          //   this.resetGame();
+          // }, 2000); //* delayin the screen changes
         }
       }
     } else if (countOfClick === theCount && game === false) {
@@ -100,20 +99,43 @@ class Game {
       }
       circle.draw();
     });
-    mainCircle.draw();
+    mainCircle.draw(); //* each rotation draws the main circle
   }
 
+  changeLevel() {
+    if (game) {
+      this.gameStart.style.display = "none";
+      theLevel += 1;
+      circles = [];
+      distanceOfMainCircle = 2.5;
+      countOfClick = 0;
+      theCount = 5;
+      game = null; //game true then win// se game finished
+      speed = 0.03;
+      this.isFree = true;
+      console.log(theLevel);
+      //window.location.reload();
+      //mainCircle = new Circle(ctx, 700, 200, 60, theLevel);
+      for (let i = 0; i < theCount; i++) {
+        circles.push({
+          circle: new Circle(ctx, 700, i * 40 + 200, 15, theCount - i),
+          firstY: i * 40 + 500,
+        });
+        circles[i].circle.draw();
+      }
+    }
+  }
   resetGame() {
     this.finishPage.style.display = "none";
     circles = [];
     distanceOfMainCircle = 2.5;
     countOfClick = 0;
-    theCount = 20;
+    theCount = 16;
     game = null; //game true then win// se game finished
     speed = 0.02;
     for (let i = 0; i < theCount; i++) {
       circles.push({
-        circle: new Circle(ctx, 700, i * 40 + 500, 15, theCount - i),
+        circle: new Circle(ctx, 700, i * 40 + 200, 15, theCount - i),
         firstY: i * 40 + 500,
       });
       circles[i].circle.draw();

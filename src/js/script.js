@@ -3,7 +3,6 @@ window.onload = function () {
   const finishButton = document.getElementById("finish-button");
   const getStartSound = document.getElementById("game-startsound");
   const gameTargetSound = document.getElementById("game-target");
-  console.log(getStartSound);
   const game = new Game();
 
   startButton.addEventListener("click", function () {
