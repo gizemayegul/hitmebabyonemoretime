@@ -19,9 +19,19 @@
   transform: translate(-50%, -50%);
 }
 
+#nameinput{
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
 #start-button,#finish-button {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 15px;
