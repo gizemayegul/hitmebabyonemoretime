@@ -106,20 +106,15 @@ class Game {
   changeLevel() {
     if (game) {
       mainCircle.text += 1;
-
-      //window.location.reload();
       this.gameStart.style.display = "none";
+      theCount += 3;
+      speed += 0.03;
       theLevel += 1;
       circles = [];
       distanceOfMainCircle = 2.5;
       countOfClick = 0;
-      theCount = 5;
       game = null; //game true then win// se game finished
-      speed = 0.03;
       this.isFree = true;
-      console.log(theLevel);
-      //
-      //mainCircle = new Circle(ctx, 700, 200, 60, theLevel);
       for (let i = 0; i < theCount; i++) {
         circles.push({
           circle: new Circle(ctx, 700, i * 40 + 500, 15, theCount - i),
@@ -128,13 +123,16 @@ class Game {
         circles[i].circle.draw();
       }
     }
+
+    //window.location.reload();
   }
   resetGame() {
     this.finishPage.style.display = "none";
     circles = [];
+    mainCircle.text = 1;
     distanceOfMainCircle = 2.5;
     countOfClick = 0;
-    theCount = 16;
+    theCount = 5;
     game = null; //game true then win// se game finished
     speed = 0.02;
     for (let i = 0; i < theCount; i++) {
