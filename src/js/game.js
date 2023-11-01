@@ -48,6 +48,7 @@ class Game {
           this.winGameSound.play();
           setTimeout(() => {
             this.finishPage.style.display = "none";
+            this.gameStart.style.display = "none";
             this.changeLevel();
           }, 2000);
 
@@ -104,6 +105,9 @@ class Game {
 
   changeLevel() {
     if (game) {
+      mainCircle.text += 1;
+
+      //window.location.reload();
       this.gameStart.style.display = "none";
       theLevel += 1;
       circles = [];
@@ -114,11 +118,11 @@ class Game {
       speed = 0.03;
       this.isFree = true;
       console.log(theLevel);
-      //window.location.reload();
+      //
       //mainCircle = new Circle(ctx, 700, 200, 60, theLevel);
       for (let i = 0; i < theCount; i++) {
         circles.push({
-          circle: new Circle(ctx, 700, i * 40 + 200, 15, theCount - i),
+          circle: new Circle(ctx, 700, i * 40 + 500, 15, theCount - i),
           firstY: i * 40 + 500,
         });
         circles[i].circle.draw();

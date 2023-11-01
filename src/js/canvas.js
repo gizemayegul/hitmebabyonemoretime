@@ -17,6 +17,7 @@ let distanceOfMainCircle = 2.5; //* lines between main circle and small circles
 const mainCircle = new Circle(ctx, 700, 200, 60, 0 + theLevel); //`${theLevel}`); //! can the values dynamic instead of hardcoded
 //!the game is created when even game hasnt started, so to create a new value with new circle should be not static.
 mainCircle.draw(); //?explain
+
 //* create small circles
 for (let i = 0; i < theCount; i++) {
   circles.push({
