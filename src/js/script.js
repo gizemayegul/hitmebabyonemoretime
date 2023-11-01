@@ -14,14 +14,16 @@ window.onload = function () {
     game.start();
   });
 
-  window.addEventListener("keyup", (e) => {
-    e.key === " " ? game.click(e) : null;
-    console.log("clicked"); //!click part needs to be fixed
-    gameTargetSound.play();
-  });
+  // window.addEventListener("keyup", (e) => {
+  //   e.key === " " ? game.click(e) : null;
+  //   console.log("clicked"); //!click part needs to be fixed
+  //   gameTargetSound.play();
+  // });
 
   cnv.addEventListener("click", (e) => {
     game.click(e);
+    console.log("clicked"); //!click part needs to be fixed
+    gameTargetSound.play();
   });
 
   setInterval(game.update, 1000 / 65); //* for the circles animation
