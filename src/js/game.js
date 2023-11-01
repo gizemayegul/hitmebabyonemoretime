@@ -33,7 +33,8 @@ class Game {
         if (circle.isFree) return;
         if (
           circles[countOfClick].circle.x >= circle.x - 25 &&
-          circles[countOfClick].circle.x <= circle.x + 15 + 3 && //! the collision part should be improved
+          circles[countOfClick].circle.x <= circle.x + 15 + 5 && //! the collision part should be improved
+          //! make a better explanation
           circle.y >= mainCircle.y / 2
         ) {
           game = false;
@@ -57,7 +58,7 @@ class Game {
           //   this.gameScreen.style.display = "none";
           //   this.gameStart.style.display = "block";
           //   this.resetGame();
-          // }, 2000); //* delayin the screen changes
+          // }, 2000); //* delayin the screen
         }
       }
     } else if (countOfClick === theCount && game === false) {
