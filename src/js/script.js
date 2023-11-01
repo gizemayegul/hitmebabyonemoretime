@@ -20,5 +20,9 @@ window.onload = function () {
     gameTargetSound.play();
   });
 
+  cnv.addEventListener("click", (e) => {
+    game.click(e);
+  });
+
   setInterval(game.update, 1000 / 65); //* for the circles animation
 };

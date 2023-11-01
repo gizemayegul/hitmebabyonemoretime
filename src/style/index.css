@@ -5,6 +5,11 @@
   background-color: antiquewhite;
 }
 
+#game-screen{
+  width: 100%;
+}
+
+
 #start-page {  
   display: block
 }#start-page,#finish-page {
@@ -17,6 +22,7 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 2em;
 }
 
 #start-button,#finish-button {
@@ -24,7 +30,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 15px;
+  padding: 20px;
   border-radius: 10px;
   font-size: 15px;
   
