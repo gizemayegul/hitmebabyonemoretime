@@ -13,7 +13,7 @@ class Game {
     this.gameScreen.style.display = "block";
     this.gameStart.style.display = "none";
     this.spinMeSound.play();
-    this.spinMeSound.volume = 0.2;
+    this.spinMeSound.volume = 0.1;
     this.gameLoop();
   }
   gameLoop() {
