@@ -120,6 +120,7 @@
 - and everytime it draws the small circles
 - and also draw rhe mainCircle every time.
 - so this game.update() method called inside a setInterval function to make big circle rotating inside script.js 
+- setInterval rotates circle
 
 
 
@@ -165,7 +166,7 @@
 - write to an element welcome and add to dom
 - button click events are managed from here
 - also the eventlistener of the click and space
-- setInterval 
+  
 
 ## Links
 - [Trello link](https://trello.com/b/uSgVpQKq/game-project)https://trello.com/b/uSgVpQKq/game-project]
