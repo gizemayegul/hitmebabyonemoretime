@@ -29,6 +29,7 @@ window.onload = function () {
 
   cnv.addEventListener("click", (e) => {
     game.click(e);
+    e.preventDefault();
     gameTargetSound.play();
   });
 
