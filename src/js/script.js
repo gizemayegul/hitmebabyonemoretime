@@ -22,7 +22,6 @@ window.onload = function () {
   startButton.addEventListener("click", function () {
     game.start();
     getStartSound.play();
-    game.play();
   });
   finishButton.addEventListener("click", function () {
     game.resetGame();
@@ -38,7 +37,6 @@ window.onload = function () {
   window.addEventListener("keyup", (e) => {
     if (e.key === " ") {
       game.click(e);
-      console.log("Spacebar key released");
       gameTargetSound.play();
     }
   });

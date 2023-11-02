@@ -14,7 +14,6 @@ class Game {
   start() {
     this.gameScreen.style.display = "block";
     this.gameStart.style.display = "none";
-    console.log("gi", this.nickname);
     this.gameLoop();
   }
   gameLoop() {
@@ -115,8 +114,9 @@ class Game {
     if (game) {
       mainCircle.text += 1;
       this.gameStart.style.display = "none";
-      theCount += 3;
-      speed += 0.03;
+      theCount = getRandomInt(5, 20); //* this could be random !
+      speed += 0.02; //add random speed to speed
+
       theLevel += 1;
       circles = [];
       distanceOfMainCircle = 2.5;

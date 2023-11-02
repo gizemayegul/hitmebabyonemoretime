@@ -6,6 +6,10 @@ cnv.width = window.innerWidth;
 cnv.height = window.innerHeight;
 ctx.lineWidth = 1.5; //* styling for cirle
 
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
 let circles = []; //* keeps small circles
 let theLevel = 1; //*
 let countOfClick = 0;
