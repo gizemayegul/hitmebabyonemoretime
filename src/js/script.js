@@ -29,7 +29,6 @@ window.onload = function () {
 
   cnv.addEventListener("click", (e) => {
     game.click(e);
-    console.log("clicked"); //!click part needs to be fixed
     gameTargetSound.play();
   });
 
