@@ -12,8 +12,8 @@ class Game {
   start() {
     this.gameScreen.style.display = "block";
     this.gameStart.style.display = "none";
-    this.spinMeSound.play();
-    this.spinMeSound.volume = 0.2;
+    //this.spinMeSound.play();
+    //this.spinMeSound.volume = 0.2;
     this.gameLoop();
   }
   gameLoop() {
@@ -105,8 +105,11 @@ class Game {
     if (game) {
       mainCircle.text += 1;
       this.gameStart.style.display = "none";
-      theCount = getRandomInt(5, 20); //* this could be random !
+      //theCount = getRandomInt(5, 20); //* this could be random !
       speed += getRandom(0.01, 0.04); //add random speed to speed
+      theLevel > 5
+        ? (theCount = getRandomInt(10, 25))
+        : (theCount = getRandomInt(5, 15)); //*
 
       theLevel += 1;
       circles = [];
@@ -122,9 +125,6 @@ class Game {
         circles[i].circle.draw();
       }
     }
-    console.log(theLevel);
-
-    //window.location.reload();
   }
   resetGame() {
     this.finishPage.style.display = "none";

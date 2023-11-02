@@ -7,6 +7,7 @@
 - If you finish the small circles you won! if they collapse you lose!
 
 ## MVP
+- Create a canvas on the game screen 
 - Draw small circles
 - Draw big circles
 - Rotate the big circle
@@ -14,15 +15,21 @@
 - Put the game is in the loop
 - Win the game
 - Lose the game
-- Have different screen for both cases.
+- Have different screen for each cases.
 - Restart the game
+- Use single Html
+- Use OOP programming
+  
 
 ## Backlog
-
-- Add new levels to the game
-- Add different levels with different diffuculties
-- Create a player classes to keep player data
-- Keep the local storage to have user's level
+- ✅ Add new levels to the game
+- ✅ Add random numbers small circles to the game
+- ✅ Add random speed to the levels
+- ✅ Keep the local storage to keep name of user/ Save nickname
+- ✅ Add audio for winning,losing and starting the game
+- ✅ Get the name of user, Welcome and Farewell
+- ✅ Show the latest score
+- 
 - Make better targeting
 - Responsive Design
 
