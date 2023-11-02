@@ -36,10 +36,10 @@ class Game {
         circle = circle.circle;
         if (circle.isFree) return;
         if (
-          circles[countOfClick].circle.x >= circle.x - 25 &&
-          circles[countOfClick].circle.x <= circle.x + 15 && //! the collision part should be improved
-          //! make a better explanation
-          circle.y >= mainCircle.y / 2
+          circles[countOfClick].circle.x >= circle.x - circle.r - speed * 100 &&
+          circles[countOfClick].circle.x <= circle.x + circle.r + speed * 100 &&
+          circle.y >= mainCircle.y && //within range of big circle
+          circles[countOfClick].circle.y >= circle.y - circle.r // vertically within range of small circle
         ) {
           game = false;
           return;
@@ -58,8 +58,8 @@ class Game {
           }, 2000);
         }
       }
-    } else if (countOfClick === theCount && game === false) {
-      game = false;
+    } else if (game === false) {
+      //game = false;
       window.location.reload();
     }
   }
