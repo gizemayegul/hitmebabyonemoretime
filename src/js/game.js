@@ -99,6 +99,7 @@ class Game {
       circle.draw();
     });
     mainCircle.draw(); //* each rotation draws the main circle
+    setInterval(game.update, 1000 / 65); //* for the circles animation
   }
 
   changeLevel() {
