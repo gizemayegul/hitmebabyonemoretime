@@ -7,8 +7,7 @@ saveLocally.addEventListener("click", function () {
   nickname[0].innerHTML =
     "Welcome" + " " + input.value + "<br/>" + "Are you ready to get dizzy?";
   localStorage.setItem("nickname", input.value);
-  finishTitle.innerHTML =
-    input.value + " " + "you failed the game! 😭 " + "Try again!";
+  finishTitle.innerHTML = input.value + " " + "you failed! 😭 " + "Try again!";
 });
 
 window.onload = function () {
