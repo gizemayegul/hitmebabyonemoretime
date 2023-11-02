@@ -144,15 +144,28 @@
 
 
 ### Circle Class
+- takes context of canvas, x,y  coordinates and radius, the text angle and this free as parameter
+  
 #### draw
+- beginPath(): to start drawing the path
+- arc is creating the circle
+- others are styling elements
 
 #### translate
+- the move the circle inside x and y coordinates
 
 #### line
+- to able to draw line between main and small circles
 
 
 
 ### Script
+
+- keeps localstorage name
+- write to an element welcome and add to dom
+- button click events are managed from here
+- also the eventlistener of the click and space
+- setInterval 
 
 ## Links
 - [Trello link](https://trello.com/b/uSgVpQKq/game-project)https://trello.com/b/uSgVpQKq/game-project]
