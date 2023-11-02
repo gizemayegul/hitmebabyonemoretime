@@ -12,7 +12,6 @@ function getRandomInt(min, max) {
 function getRandom(min, max) {
   return Math.random() * (max - min) + min;
 }
-console.log(getRandom(0.01, 0.04), "random speed");
 
 let circles = []; //* keeps small circles
 let theLevel = 1; //*
