@@ -14,7 +14,7 @@
 
 #title,#finish-title {
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -25,6 +25,14 @@
   transform: translate(-50%, -50%);
   border: 2px black solid;
   border-radius: 5px;
+  padding: 10px;
+}
+.nickname {
+  top: 25%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+
 }
 #nameinput{
   position: absolute;
@@ -38,7 +46,7 @@
 
 #start-button,#finish-button {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 15px;
@@ -47,11 +55,24 @@
   
   
 }
+
+#start-button{
+  top: 68%;
+  left: 50%;
+}
+#localstorage_test {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
 #game-screen {
   display: none;
 }
-
-
 #finish-page {
   display: none;
 }

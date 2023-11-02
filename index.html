@@ -8,19 +8,24 @@
   </head>
   <body id="app">
     <div id="start-page">
-      <h1 id="title">Hit Me Baby One More Time</h1>
+      
+      <h1 id="title">You Spin Me Round</h1>
+      <h3 class="nickname"></h3>
       <div id="howtoplay">
         <h2> How to Play game?</h2>
           <p>The goal is finished the small circles you have without collapsing each other!<br/> Just click the screen and enjoy 😊 </br> Good News! You have unlimited levels.  🥳 🎈</p>
       </div>
       <input id="nameinput" value="" type="text" placeholder="Enter your nickname!😁"></input>
+      <button id="localstorage_test">Save Nickname</button>
       <button id="start-button">Start the Game</button>
+
     </div>
     <div id="finish-page">
-      <h1 id="finish-title">You Failed Sorry 😁!</h1>
+      <h1 id="finish-title"></h1>
       <button id="finish-button">Start Again!</button>
     </div>
-    <canvas id="game-screen"></canvas>
+    <canvas id="game-screen">
+    </canvas>
     <audio id="game-startsound" src="./assets/game-start-6104.mp3" type="audio/ogg" controls></audio>
     <audio id="game-endsound" src="./assets/game-end.mp3" type="audio/ogg" controls></audio>
     <audio id="game-target" src="./assets/arrowsound.mp3" type="audio/ogg" controls></audio>

@@ -5,18 +5,25 @@ class Game {
     this.finishPage = document.getElementById("finish-page");
     this.endGameSound = document.getElementById("game-endsound");
     this.winGameSound = document.getElementById("game-win");
+
+    //this.element = document.createElement("span");
+    // this.element.innerHTML = this.nickname;
+    // this.finishPage.appendChild(this.element);
   }
 
   start() {
     this.gameScreen.style.display = "block";
     this.gameStart.style.display = "none";
+    console.log("gi", this.nickname);
     this.gameLoop();
   }
   gameLoop() {
     console.log("in the game loop");
     if (game === false) {
+      console.log("Your nickname is " + this.nickname);
       this.endGameSound.play();
       setTimeout(() => {
+        localStorage.removeItem("nickname");
         this.gameScreen.style.display = "none";
         this.finishPage.style.display = "block";
       }, 2200); //* Delaying the screen changes
@@ -33,7 +40,7 @@ class Game {
         if (circle.isFree) return;
         if (
           circles[countOfClick].circle.x >= circle.x - 25 &&
-          circles[countOfClick].circle.x <= circle.x + 15 + 5 && //! the collision part should be improved
+          circles[countOfClick].circle.x <= circle.x + 15 && //! the collision part should be improved
           //! make a better explanation
           circle.y >= mainCircle.y / 2
         ) {
