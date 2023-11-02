@@ -8,18 +8,18 @@
 
 ## MVP
 
-- Create a canvas on the game screen 
-- Draw small circles
-- Draw big circles
-- Rotate the big circle
-- Move small circles when the space key is pressed
-- Put the game is in the loop
-- Win the game
-- Lose the game
-- Have different screen for each cases.
-- Restart the game
-- Use single Html
-- Use OOP programming
+- ✅ Create a canvas on the game screen 
+- ✅ Draw small circles
+- ✅ Draw big circles
+- ✅  Rotate the big circle
+- ✅ Move small circles when the space key is pressed
+- ✅ Put the game is in the loop
+- ✅ Win the game
+- ✅ Lose the game
+- ✅ Have different screen for each cases.
+- ✅  Restart the game
+- ✅ Use single Html
+- ✅ Use OOP programming
   
 
 ## Backlog
@@ -121,6 +121,8 @@
 - and also draw rhe mainCircle every time.
 - so this game.update() method called inside a setInterval function to make big circle rotating inside script.js 
 - setInterval rotates circle
+
+!!! since the moment you click is the important somethimes the circles collapse bbut the moment of click is matters.
 
 
 

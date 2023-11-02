@@ -67,11 +67,11 @@ class Game {
     } else if (game) {
       ctx.fillStyle = "#98C9A6";
       speed -= speed > 0 ? 0.00025 : 0; //* to stop the animation
-      distanceOfMainCircle += distanceOfMainCircle < 10 ? 0.05 : 0; //! changes the distance of the main circle to get the  animation
+      distanceOfMainCircle += distanceOfMainCircle < 10 ? 0.05 : 0; //* changes the distance of the main circle to get the  animation
     } else {
       ctx.fillStyle = "#F08080";
       speed -= speed > 0 ? 0.00025 : 0; //* to stop the animation
-      distanceOfMainCircle += distanceOfMainCircle > 0 ? 0.05 : 0; // the distance is increa //! check the logic better
+      distanceOfMainCircle += distanceOfMainCircle > 0 ? 0.05 : 0; // the distance is increa
     }
     ctx.fillRect(0, 0, cnv.width, cnv.height); //* to clan the canvas
 
