@@ -6,14 +6,11 @@ class Game {
     this.score = document.getElementById("score");
     this.endGameSound = document.getElementById("game-endsound");
     this.winGameSound = document.getElementById("game-win");
-    this.spinMeSound = document.getElementById("spinmeround");
   }
 
   start() {
     this.gameScreen.style.display = "block";
     this.gameStart.style.display = "none";
-    this.spinMeSound.play();
-    this.spinMeSound.volume = 0.2;
     this.gameLoop();
   }
   gameLoop() {
@@ -36,8 +33,8 @@ class Game {
         circle = circle.circle;
         if (circle.isFree) return;
         if (
-          circles[countOfClick].circle.x >= circle.x - circle.r - speed * 100 &&
-          circles[countOfClick].circle.x <= circle.x + circle.r + speed * 100 &&
+          circles[countOfClick].circle.x >= circle.x - circle.r &&
+          circles[countOfClick].circle.x <= circle.x + circle.r &&
           circle.y >= mainCircle.y && //within range of big circle
           circles[countOfClick].circle.y >= circle.y - circle.r // vertically within range of small circle
         ) {
@@ -98,16 +95,14 @@ class Game {
       }
       circle.draw();
     });
-    mainCircle.draw(); //* each rotation draws the main circle
-    setInterval(game.update, 1000 / 65); //* for the circles animation
+    mainCircle.draw(); //* each rotation draws the main circlex
   }
 
   changeLevel() {
     if (game) {
       mainCircle.text += 1;
       this.gameStart.style.display = "none";
-      //theCount = getRandomInt(5, 20); //* this could be random !
-      speed += getRandom(0.01, 0.04); //add random speed to speed
+      speed += getRandom(0.01, 0.05); //add random speed to speed
       theLevel > 5
         ? (theCount = getRandomInt(10, 25))
         : (theCount = getRandomInt(5, 15)); //*
