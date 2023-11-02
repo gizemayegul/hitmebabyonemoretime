@@ -24,7 +24,9 @@ window.onload = function () {
   });
   finishButton.addEventListener("click", function () {
     game.resetGame();
-    game.start();
+    setTimeout(() => {
+      game.start();
+    }, 100);
   });
 
   cnv.addEventListener("click", (e) => {
