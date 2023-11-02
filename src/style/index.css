@@ -18,6 +18,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+#score {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 #howtoplay{
   position: absolute;
   top: 40%;
@@ -42,6 +49,11 @@
   padding: 15px;
   border-radius: 10px;
   font-size: 15px;
+  background-color: antiquewhite;
+}
+
+#nameinput:focus{
+  background-color: antiquewhite;
 }
 
 #start-button,#finish-button {

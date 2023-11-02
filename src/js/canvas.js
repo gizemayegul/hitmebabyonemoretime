@@ -9,6 +9,10 @@ ctx.lineWidth = 1.5; //* styling for cirle
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
+function getRandom(min, max) {
+  return Math.random() * (max - min) + min;
+}
+console.log(getRandom(0.01, 0.04), "random speed");
 
 let circles = []; //* keeps small circles
 let theLevel = 1; //*

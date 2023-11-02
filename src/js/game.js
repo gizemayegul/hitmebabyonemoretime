@@ -3,6 +3,7 @@ class Game {
     this.gameScreen = document.getElementById("game-screen");
     this.gameStart = document.getElementById("start-page");
     this.finishPage = document.getElementById("finish-page");
+    this.score = document.getElementById("score");
     this.endGameSound = document.getElementById("game-endsound");
     this.winGameSound = document.getElementById("game-win");
 
@@ -19,7 +20,7 @@ class Game {
   gameLoop() {
     console.log("in the game loop");
     if (game === false) {
-      console.log("Your nickname is " + this.nickname);
+      this.score.innerHTML = "Your Score" + " : " + `${theLevel}`;
       this.endGameSound.play();
       setTimeout(() => {
         localStorage.removeItem("nickname");
@@ -58,13 +59,6 @@ class Game {
             this.gameStart.style.display = "none";
             this.changeLevel();
           }, 2000);
-
-          // setTimeout(() => {
-          //   this.finishPage.style.display = "none";
-          //   this.gameScreen.style.display = "none";
-          //   this.gameStart.style.display = "block";
-          //   this.resetGame();
-          // }, 2000); //* delayin the screen
         }
       }
     } else if (countOfClick === theCount && game === false) {
@@ -115,7 +109,7 @@ class Game {
       mainCircle.text += 1;
       this.gameStart.style.display = "none";
       theCount = getRandomInt(5, 20); //* this could be random !
-      speed += 0.02; //add random speed to speed
+      speed += getRandom(0.01, 0.04); //add random speed to speed
 
       theLevel += 1;
       circles = [];
@@ -131,6 +125,7 @@ class Game {
         circles[i].circle.draw();
       }
     }
+    console.log(theLevel);
 
     //window.location.reload();
   }
@@ -138,6 +133,7 @@ class Game {
     this.finishPage.style.display = "none";
     circles = [];
     mainCircle.text = 1;
+    theLevel = 1;
     distanceOfMainCircle = 2.5;
     countOfClick = 0;
     theCount = 5;

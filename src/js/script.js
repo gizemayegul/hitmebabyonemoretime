@@ -36,6 +36,7 @@ window.onload = function () {
 
   window.addEventListener("keyup", (e) => {
     if (e.key === " ") {
+      e.preventDefault();
       game.click(e);
       gameTargetSound.play();
     }
