@@ -7,17 +7,13 @@ class Game {
     this.endGameSound = document.getElementById("game-endsound");
     this.winGameSound = document.getElementById("game-win");
     this.spinMeSound = document.getElementById("spinmeround");
-    console.log(this.spinMeSound);
-
-    //this.element = document.createElement("span");
-    // this.element.innerHTML = this.nickname;
-    // this.finishPage.appendChild(this.element);
   }
 
   start() {
     this.gameScreen.style.display = "block";
     this.gameStart.style.display = "none";
     this.spinMeSound.play();
+    this.spinMeSound.volume = 0.2;
     this.gameLoop();
   }
   gameLoop() {
