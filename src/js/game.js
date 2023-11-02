@@ -6,6 +6,8 @@ class Game {
     this.score = document.getElementById("score");
     this.endGameSound = document.getElementById("game-endsound");
     this.winGameSound = document.getElementById("game-win");
+    this.spinMeSound = document.getElementById("spinmeround");
+    console.log(this.spinMeSound);
 
     //this.element = document.createElement("span");
     // this.element.innerHTML = this.nickname;
@@ -15,10 +17,10 @@ class Game {
   start() {
     this.gameScreen.style.display = "block";
     this.gameStart.style.display = "none";
+    this.spinMeSound.play();
     this.gameLoop();
   }
   gameLoop() {
-    console.log("in the game loop");
     if (game === false) {
       this.score.innerHTML = "Your Score" + " : " + `${theLevel}`;
       this.endGameSound.play();
@@ -27,7 +29,6 @@ class Game {
         this.gameScreen.style.display = "none";
         this.finishPage.style.display = "block";
       }, 2200); //* Delaying the screen changes
-
       return;
     }
 
