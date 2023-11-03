@@ -173,6 +173,6 @@
 
 ## Links
 - [Trello link](https://trello.com/b/uSgVpQKq/game-project)https://trello.com/b/uSgVpQKq/game-project]
-- [Deployment Link ](https://gizemayegul.github.io/hitmebabyonemoretime/)https://gizemayegul.github.io/hitmebabyonemoretime/
-- [Github link](https://github.com/gizemayegul/hitmebabyonemoretime)https://github.com/gizemayegul/hitmebabyonemoretime
+- [Deployment Link ](https://gizemayegul.github.io/youspinmeround/)https://gizemayegul.github.io/youspinmeround/
+- [Github link](https://github.com/gizemayegul/youspinmeround.git)https://github.com/gizemayegul/youspinmeround.git/
 - [Slides Link](https://docs.google.com/presentation/d/1XpB1O-pbW3cK996ccPqG4itFtgqiCEsXr4aovq4Kqcg/edit#slide=id.g3fa6174f79_0_125)https://docs.google.com/presentation/d/1XpB1O-pbW3cK996ccPqG4itFtgqiCEsXr4aovq4Kqcg/edit#slide=id.g3fa6174f79_0_125
