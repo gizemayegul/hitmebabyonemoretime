@@ -11,13 +11,13 @@
 - ✅ Create a canvas on the game screen 
 - ✅ Draw small circles
 - ✅ Draw big circles
-- ✅  Rotate the big circle
+- ✅ Rotate the big circle
 - ✅ Move small circles when the space key is pressed
 - ✅ Put the game is in the loop
 - ✅ Win the game
 - ✅ Lose the game
 - ✅ Have different screen for each cases.
-- ✅  Restart the game
+- ✅ Restart the game
 - ✅ Use single Html
 - ✅ Use OOP programming
   
@@ -101,6 +101,7 @@
 - increment the count of click by 1
 - if your countofclik is equal to the number of circles game is true and change the pages and the sounds
 - if the game false reload the page
+-   circles[countOfClick].circle.isFree = false; condition decides if the circle is clicked or not if the circle has the interaction is not so will taken in the if statemend
 
 #### update()
 

@@ -45,7 +45,7 @@ class Game {
       circles[countOfClick].circle.isFree = false;
       countOfClick++;
       if (countOfClick === theCount) {
-        game = true; //* game wind
+        game = true; //* game win
         if (game) {
           this.winGameSound.play();
           setTimeout(() => {
@@ -56,7 +56,6 @@ class Game {
         }
       }
     } else if (game === false) {
-      //game = false;
       window.location.reload();
     }
   }
