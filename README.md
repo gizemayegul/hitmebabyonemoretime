@@ -105,25 +105,25 @@
 
 #### update()
 
-- the main logic is goes here.
-- according to game states the background changes.
-- fillRect cleans the background to get default background of css 
-- ctx.fill gives the background to the canvas elements inside the gamescreen.
-- speed -= speed is makes the big circle stop
-- distancoOfMaincircle += distanceOfMainCircle make the line between big circle and small circle change increases the distanceOfMainCircle by 0.05 if it's less than 10, and if it's already 10 or greate to have slow animation
-- firstY variable get the value of the first y direction the small circle have.
-- circle class has booelan value of isFree which enables us to detect selected circle
-- if the value of isFree true the changes means the circle is free change the y direction by 40 every click it takes the circle to top
-- it calls the circle.translate method from circle class. x direction stays same but the value of change by y variable.
-- if the circle is not free the translate method is called again. this time the matheamical equation of is applied to get the direction of the big circle.
+- the main logic goes here.
+- according to the game the background changes.
+- fillRect cleans the background to get the default background of CSS 
+- ctx.fill gives the background to the canvas elements inside the game screen.
+- speed -= speed makes the big circle stop
+- distancoOfMaincircle += distanceOfMainCircle make the line between the big circle and small circle change increases the distanceOfMainCircle by 0.05 if it's less than 10, and if it's already 10 or great to have slow animation
+- firstY variable gets the value of the first y direction the small circle has.
+- circle class has boolean value of isFree which enables us to detect selected circle
+- if the value of isFree is true the changes mean the circle is free change the y direction by 40 for every click it takes the circle to the top
+- it calls the circle.translate method from circle class. x direction stays the same but the value of change by y variable.
+- if the circle is not free the translation method is called again. This time the mathematical equation of is applied to get the direction of the big circle.
 - the angle is defined as 45.5 inside circle class
-- and the angle variable changes by adding constant spped value.
-- and everytime it draws the small circles
-- and also draw rhe mainCircle every time.
-- so this game.update() method called inside a setInterval function to make big circle rotating inside script.js 
+- and the angle variable changes by adding a constant speed value.
+- and every time it draws the small circles
+- and also draw the main circle every time.
+- so this game. update() method called inside a setInterval function to make big circle rotating inside script.js 
 - setInterval rotates circle
 
-!!! since the moment you click is the important somethimes the circles collapse bbut the moment of click is matters.
+!!! since the moment you click is important sometimes the circles collapse but the moment of click is matters.
 
 
 
