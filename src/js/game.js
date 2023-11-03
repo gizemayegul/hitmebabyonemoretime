@@ -56,6 +56,7 @@ class Game {
         }
       }
     } else if (game === false) {
+      //* since the game initital value is null, the game should be equal go false
       window.location.reload();
     }
   }
@@ -89,10 +90,9 @@ class Game {
             Math.sin(circle.angle) * mainCircle.r * distanceOfMainCircle
         );
         circle.angle += speed;
-
         circle.line(circle.x, circle.y, mainCircle.x, mainCircle.y);
       }
-      circle.draw();
+      circle.draw(); //* draws again the small circle
     });
     mainCircle.draw(); //* each rotation draws the main circlex
   }
@@ -101,7 +101,7 @@ class Game {
     if (game) {
       mainCircle.text += 1;
       this.gameStart.style.display = "none";
-      speed += getRandom(0.01, 0.05); //add random speed to speed
+      speed += getRandom(0.01, 0.05); //* add random speed to speed
       theLevel > 5
         ? (theCount = getRandomInt(10, 25))
         : (theCount = getRandomInt(5, 15)); //*
@@ -110,7 +110,7 @@ class Game {
       circles = [];
       distanceOfMainCircle = 2.5;
       countOfClick = 0;
-      game = null; //game true then win// se game finished
+      game = null; //* game true then win// se game finished
       this.isFree = true;
       for (let i = 0; i < theCount; i++) {
         circles.push({
@@ -129,7 +129,7 @@ class Game {
     distanceOfMainCircle = 2.5;
     countOfClick = 0;
     theCount = 5;
-    game = null; //game true then win// se game finished
+    game = null; //* game true then win// se game finished
     speed = 0.02;
     for (let i = 0; i < theCount; i++) {
       circles.push({
