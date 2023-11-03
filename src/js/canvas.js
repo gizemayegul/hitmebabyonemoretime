@@ -25,7 +25,7 @@ const mainCircle = new Circle(ctx, 700, 200, 60, 1); //! can the values dynamic 
 //!the game is created when even game hasnt started, so to create a new value with new circle should be not static.
 mainCircle.draw();
 
-//* create small circles
+//* create small circles to push inside the array
 for (let i = 0; i < theCount; i++) {
   circles.push({
     circle: new Circle(ctx, 700, i * 40 + 500, 15, theCount - i),
