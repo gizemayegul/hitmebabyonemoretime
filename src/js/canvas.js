@@ -21,7 +21,7 @@ let game = null; //* game true then win// false game finished
 let speed = 0.02;
 let distanceOfMainCircle = 2.5; //* lines between main circle and small circles
 
-const mainCircle = new Circle(ctx, cnv.width / 2, cnv.height / 4, 70, 1);
+const mainCircle = new Circle(ctx, cnv.width / 2, cnv.height / 4, 60, 1);
 mainCircle.draw();
 
 //* create small circles to push inside the array

@@ -112,22 +112,21 @@ class Game {
       countOfClick = 0;
       game = null; //* game true then win// se game finished
       this.isFree = true;
-      //   for (let i = 0; i < theCount; i++) {
-      //     circles.push({
-      //       circle: new Circle(
-      //         ctx,
-      //         cnv.width / 2,
-      //         i * 40 + cnv.height / 2,
-      //         15,
-      //         theCount - i
-      //       ),
-      //       firstY: i * 40 + cnv.height / 2,
-      //     });
-      //     circles[i].circle.draw();
-      //   }
-      // }
-      drawCircles();
+      for (let i = 0; i < theCount; i++) {
+        circles.push({
+          circle: new Circle(
+            ctx,
+            cnv.width / 2,
+            i * 40 + cnv.height / 2,
+            15,
+            theCount - i
+          ),
+          firstY: i * 40 + cnv.height / 2,
+        });
+        circles[i].circle.draw();
+      }
     }
+    drawCircles();
   }
   resetGame() {
     this.finishPage.style.display = "none";
@@ -139,19 +138,18 @@ class Game {
     theCount = 5;
     game = null; //* game true then win// se game finished
     speed = 0.02;
-    //   for (let i = 0; i < theCount; i++) {
-    //     circles.push({
-    //       circle: new Circle(
-    //         cnv.width / 2,
-    //         i * 40 + cnv.height / 2,
-    //         15,
-    //         theCount - i
-    //       ),
-    //       firstY: i * 40 + cnv.height / 2,
-    //     });
-    //     circles[i].circle.draw();
-    //   }
-    // }
+    for (let i = 0; i < theCount; i++) {
+      circles.push({
+        circle: new Circle(
+          cnv.width / 2,
+          i * 40 + cnv.height / 2,
+          15,
+          theCount - i
+        ),
+        firstY: i * 40 + cnv.height / 2,
+      });
+      circles[i].circle.draw();
+    }
     drawCircles();
   }
 }
