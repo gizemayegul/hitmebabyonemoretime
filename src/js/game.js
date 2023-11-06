@@ -114,19 +114,12 @@ class Game {
       this.isFree = true;
       for (let i = 0; i < theCount; i++) {
         circles.push({
-          circle: new Circle(
-            ctx,
-            cnv.width / 2,
-            i * 40 + cnv.height / 2,
-            15,
-            theCount - i
-          ),
-          firstY: i * 40 + cnv.height / 2,
+          circle: new Circle(ctx, 700, i * 40 + 500, 15, theCount - i),
+          firstY: i * 40 + 500,
         });
         circles[i].circle.draw();
       }
     }
-    drawCircles();
   }
   resetGame() {
     this.finishPage.style.display = "none";
@@ -140,16 +133,10 @@ class Game {
     speed = 0.02;
     for (let i = 0; i < theCount; i++) {
       circles.push({
-        circle: new Circle(
-          cnv.width / 2,
-          i * 40 + cnv.height / 2,
-          15,
-          theCount - i
-        ),
-        firstY: i * 40 + cnv.height / 2,
+        circle: new Circle(ctx, 700, i * 40 + 500, 15, theCount - i),
+        firstY: i * 40 + 500,
       });
       circles[i].circle.draw();
     }
-    drawCircles();
   }
 }

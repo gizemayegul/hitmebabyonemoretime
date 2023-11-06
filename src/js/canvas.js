@@ -4,7 +4,7 @@ const ctx = cnv.getContext("2d");
 
 cnv.width = window.innerWidth;
 cnv.height = window.innerHeight;
-ctx.lineWidth = 1.5; //* styling for circle
+ctx.lineWidth = 1.5; //* styling for cirle
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
@@ -21,21 +21,15 @@ let game = null; //* game true then win// false game finished
 let speed = 0.02;
 let distanceOfMainCircle = 2.5; //* lines between main circle and small circles
 
-const mainCircle = new Circle(ctx, cnv.width / 2, cnv.height / 4, 60, 1);
+const mainCircle = new Circle(ctx, 700, 200, 60, 1); //! can the values dynamic instead of hardcoded
+//!the game is created when even game hasnt started, so to create a new value with new circle should be not static.
 mainCircle.draw();
 
 //* create small circles to push inside the array
-function drawCircles() {}
 for (let i = 0; i < theCount; i++) {
   circles.push({
-    circle: new Circle(
-      ctx,
-      cnv.width / 2,
-      i * 40 + cnv.height / 2,
-      15,
-      theCount - i
-    ),
-    firstY: i * 40 + cnv.height / 2,
+    circle: new Circle(ctx, 700, i * 40 + 500, 15, theCount - i),
+    firstY: i * 40 + 500,
   });
   circles[i].circle.draw();
 } // * creates small circles and after that you can do update on them
